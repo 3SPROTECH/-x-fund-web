@@ -5,17 +5,16 @@ import { Button } from "@/components/ui/button";
 
 import blobsImage from "@/assets/blobs.png";
 import handWithPhoneImage from "@/assets/hand-with-phone.png";
+import sparkImage from "@/assets/spark.png";
 
 const Hero = () => {
   return (
-    // FIX 1: Corrected typo 'md:py-' to 'md:py-24'
-    <Section className="pt-12 md:py-24 bg-[#f5f9f5] overflow-hidden">
+    // FIX: Reduced top padding from 'pt-12 md:py-24' to 'pt-8 md:py-16'
+    <Section className="pt-8 md:py- bg-[#f5f9f5] overflow-hidden">
       
-      {/* FIX 2: Reduced 'gap-10' to 'gap-6' for mobile */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-0 items-center">
         
         {/* Left Column: Content */}
-        {/* FIX 3: Removed 'pb-12' to remove extra bottom spacing */}
         <div className="space-y-5 lg:pr-4 xl:pr-10 w-full">
           <div className="space-y-4">
             <h1 className="text-4xl xs:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
@@ -60,29 +59,27 @@ const Hero = () => {
         </div>
 
         {/* Right Column: Images */}
-        {/* FIX 4: Reduced 'mt-12' to 'mt-8' to bring images closer to text on mobile */}
-        <div className="relative flex justify-center lg:justify-end items-center lg:mt-0 lg:ml-0 xl:-ml-12 ">
+        <div className="relative flex justify-center lg:justify-end items-center lg:mt-0 lg:ml-0 lg:pr-12 lap:pr-20 xl:pr-0 xl:-ml-12 ">
            
-           {/* Container with controlled overflow */}
            <div className="
              relative overflow-hidden
              
              /* Mobile: Constrained container */
              w-[75%]               
-             max-w-70         
+             max-w-70          
              
              /* Mobile Breakpoints */
              xxs:w-[80%]           
              xs:max-w-[340px]      
-             sm:max-w-95      
+             sm:max-w-95       
              md:max-w-105     
              
-             /* Laptop & Desktop */
-             lg:w-full lg:max-w-100 lg:overflow-visible      
-             lap:max-w-[440px]     
-             xl:max-w-125    
-             desk:max-w-[580px]    
-             3xl:max-w-[650px]     
+             /* Laptop & Desktop Sizing */
+             lg:w-full lg:max-w-[420px] lg:overflow-visible      
+             lap:max-w-[500px]     
+             xl:max-w-[600px]    
+             desk:max-w-[650px]    
+             3xl:max-w-[700px]     
            ">
              {/* Blob background */}
              <img
@@ -92,21 +89,34 @@ const Hero = () => {
                  absolute top-1/2 left-1/2 
                  -translate-x-1/2 -translate-y-1/2
                  pointer-events-none z-0
-                 
-                 /* Mobile: Blob matches container (no overflow) */
                  w-full
-                 
-                 /* Desktop: Blob can overflow for asymmetric effect */
                  lg:w-[140%]
                  lg:-translate-x-[55%]
                "
+             />
+
+             {/* Sparks */}
+             <img
+               src={sparkImage}
+               alt=""
+               className="absolute top-[28%] left-[20%] w-3 xs:w-5 h-auto z-10 pointer-events-none opacity-90"
+             />
+             <img
+               src={sparkImage}
+               alt=""
+               className="absolute top-[42%] right-[15%] w-2 xs:w-4 h-auto z-10 pointer-events-none opacity-80"
+             />
+             <img
+               src={sparkImage}
+               alt=""
+               className="absolute bottom-[25%] right-[22%] w-3 xs:w-4 h-auto z-10 pointer-events-none opacity-90"
              />
              
              {/* Phone image */}
              <img
                src={handWithPhoneImage}
                alt="Application mobile X-Fund"
-               className="relative z-10 w-full h-auto drop-shadow-2xl"
+               className="relative z-20 w-full h-auto drop-shadow-2xl"
              />
            </div>
         </div>
@@ -115,4 +125,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;    
+export default Hero;
