@@ -29,14 +29,13 @@ src/
 │   ├── services/               # Composants spécifiques à la Page Services
 │   │   └── ServiceList.tsx
 │   │
-│   └── contact/                # Composants spécifiques à la Page Contact
-│       └── ContactForm.tsx
+│   └── ...
 │
 ├── pages/                      # Les Vues (Pages) principales
 │   ├── HomePage.tsx            # Assemble les composants de components/home
 │   ├── AboutPage.tsx           # Assemble les composants de components/about
 │   ├── ServicesPage.tsx
-│   └── ContactPage.tsx
+│   └── ...
 │
 ├── assets/                     # Ressources statiques
 │   ├── images/
