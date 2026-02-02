@@ -75,9 +75,9 @@ const Hero = () => {
              md:max-w-105     
              
              /* Laptop & Desktop Sizing */
-             lg:w-full lg:max-w-[420px] lg:overflow-visible      
+             lg:w-full lg:max-w-105 lg:overflow-visible      
              lap:max-w-[500px]     
-             xl:max-w-[600px]    
+             xl:max-w-150   
              desk:max-w-[650px]    
              3xl:max-w-[700px]     
            ">
