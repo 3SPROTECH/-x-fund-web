@@ -36,7 +36,7 @@ const Header = () => {
               className="fixed left-0 right-0 bg-gray-50 
                       opacity-0 translate-y-[-10px] pointer-events-none
                       transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
-              style={{ top: '70px' }}
+              style={{ top: '65px' }}
             >
               <div className="max-w-7xl mx-auto px-6 py-12">
                 <div className="flex items-start gap-16">
@@ -51,7 +51,7 @@ const Header = () => {
                   <div className="grid grid-cols-2 gap-6 flex-1">
                     <a href="#" className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-green rounded-full flex items-center justify-center">
+                        <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
                           <FileText className="text-primary" size={20} />
                         </div>
                         <span className="font-medium text-gray-800">Porteurs de projets</span>
@@ -60,7 +60,7 @@ const Header = () => {
                     </a>
                     <a href="#" className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-green rounded-full flex items-center justify-center">
+                        <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
                           <Building className="text-primary" size={20} />
                         </div>
                         <span className="font-medium text-gray-800">Agents immobilier</span>
@@ -85,7 +85,7 @@ const Header = () => {
               className="fixed left-0 right-0 bg-gray-50
                       opacity-0 translate-y-[-10px] pointer-events-none
                       transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
-              style={{ top: '70px' }}
+              style={{ top: '65px' }}
             >
               <div className="max-w-7xl mx-auto px-6 py-12">
                 <div className="flex items-start gap-16">
@@ -106,7 +106,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <FileText className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Notre histoire</span>
@@ -115,7 +115,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <Users className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Notre expertise</span>
@@ -129,7 +129,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <Newspaper className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Presse</span>
@@ -138,7 +138,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <Mail className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Contact</span>
@@ -152,7 +152,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <UserPlus className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Nous rejoindre</span>
@@ -179,7 +179,7 @@ const Header = () => {
               className="fixed left-0 right-0 bg-gray-50
                       opacity-0 translate-y-[-10px] pointer-events-none
                       transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
-              style={{ top: '70px' }}
+              style={{ top: '65px' }}
             >
               <div className="max-w-7xl mx-auto px-6 py-12">
                 <div className="flex items-start gap-16">
@@ -209,7 +209,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <HelpCircle className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">FAQ</span>
@@ -218,7 +218,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <Shield className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Nos garanties</span>
@@ -232,7 +232,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <Star className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Avis</span>
@@ -241,7 +241,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <Mic className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Notre Podcast</span>
@@ -250,7 +250,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <BookOpen className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Bricks Stories</span>
@@ -264,7 +264,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <Map className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Roadmap Publique</span>
@@ -350,7 +350,7 @@ const Header = () => {
                 <div className="mt-2 mb-4 space-y-3">
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
                         <FileText className="text-primary" size={20} />
                       </div>
                       <span className="font-medium text-gray-800">Porteurs de projets</span>
@@ -359,7 +359,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
                         <Building className="text-primary" size={20} />
                       </div>
                       <span className="font-medium text-gray-800">Agents immobilier</span>
@@ -386,7 +386,7 @@ const Header = () => {
                 <div className="mt-2 mb-4 space-y-2">
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <FileText className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Notre histoire</span>
@@ -395,7 +395,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <Users className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Notre expertise</span>
@@ -404,7 +404,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <Newspaper className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Presse</span>
@@ -413,7 +413,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <Mail className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Contact</span>
@@ -422,7 +422,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <UserPlus className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Nous rejoindre</span>
@@ -449,7 +449,7 @@ const Header = () => {
                 <div className="mt-2 mb-4 space-y-2">
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <FileText className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Blog</span>
@@ -458,7 +458,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <HelpCircle className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">FAQ</span>
@@ -467,7 +467,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <Shield className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Nos garanties</span>
@@ -476,7 +476,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <Star className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Avis</span>
@@ -485,7 +485,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <Mic className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Notre Podcast</span>
@@ -494,7 +494,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <BookOpen className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Bricks Stories</span>
@@ -503,7 +503,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                         <Map className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Roadmap Publique</span>
