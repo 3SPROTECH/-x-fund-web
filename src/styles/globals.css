@@ -1,16 +1,47 @@
-/* 1. Import the Tailwind engine */
 @import "tailwindcss";
 
-/* 2. Configure your Theme directly here */
 @theme {
-  /* Set Poppins as the default sans font */
   --font-sans: "Poppins", sans-serif;
+  --font-handwriting: "Playwrite US Trad", cursive;
   
-  /* Define your custom colors */
   --color-primary: #24AD1F;
-  --color-primary-hover: #1e941a; /* slightly darker for hover states */
+  --color-primary-hover: #1e941a; 
+
+  
+  /* --- GRANULAR BREAKPOINTS --- */
+
+  /* 1. MOBILE ZONE */
+  --breakpoint-mini: 320px;   /* iPhone SE 1st Gen / Small Androids */
+  --breakpoint-xxs: 375px;    /* iPhone X, 11, 12, 13, SE 2nd Gen */
+  --breakpoint-xs: 475px;     /* Large Phones / Phablets */
+
+  /* (Standard sm is 640px) */
+
+  /* 2. TABLET ZONE */
+  --breakpoint-tab: 700px;    /* Mid-size tablets before full 'md' */
+
+  /* (Standard md is 768px - iPad Portrait) */
+
+  --breakpoint-md-lg: 900px;  /* Surface Pro / Vertical Foldables */
+
+  /* (Standard lg is 1024px - iPad Landscape / Small Laptops) */
+
+  /* 3. LAPTOP ZONE */
+  --breakpoint-lap: 1150px;   /* 13-inch MacBooks / Compact Laptops */
+
+  /* (Standard xl is 1280px - 720p Monitors / Standard Laptops) */
+
+  /* 4. DESKTOP ZONE */
+  --breakpoint-desk: 1440px;  /* 1440p Monitors / Larger Laptops */
+  
+  /* (Standard 2xl is 1536px) */
+
+  /* 5. ULTRA WIDE ZONE */
+  --breakpoint-3xl: 1600px;   /* Wide monitors */
+  --breakpoint-4xl: 1920px;   /* Full HD 1080p width */
+  --breakpoint-ult: 2560px;   /* 4K / Ultra-wide screens */
 }
 
-/* 3. Add the Poppins font from Google */
+
 /* We use @import here so it loads automatically */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
