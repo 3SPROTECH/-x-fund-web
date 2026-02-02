@@ -4,6 +4,7 @@ import {
   HelpCircle, Shield, Star, Mic, BookOpen, Map, GraduationCap,
   Menu, X
 } from "lucide-react";
+import { Button } from "../ui/button";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ const Header = () => {
                   <div className="flex-shrink-0">
                     <h3 className="text-2xl font-bold text-gray-800 mb-2">Se financer</h3>
                     <p className="text-gray-600">
-                      Bricks vous met en relation avec plus de 400 000<br />
+                      X-fund vous met en relation avec plus de 400 000<br />
                       membres pour obtenir un financement en quelques<br />
                       heures.
                     </p>
@@ -191,7 +192,7 @@ const Header = () => {
                     <p className="text-gray-600 mb-4">
                       Diverses ressources sont à votre<br />
                       disposition afin de vous garantir la<br />
-                      meilleure expérience sur Bricks.
+                      meilleure expérience sur X-fund.
                     </p>
                     <a href="#" className="text-primary hover:text-primary font-medium underline">
                       Créer un compte
@@ -256,7 +257,7 @@ const Header = () => {
                             <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
                               <BookOpen className="text-primary" size={16} />
                             </div>
-                            <span className="text-sm font-medium text-gray-800">Bricks Stories</span>
+                            <span className="text-sm font-medium text-gray-800">X-fund Stories</span>
                           </div>
                           <ArrowRight className="text-gray-400 group-hover/card:text-primary transition-colors" size={16} />
                         </a>
@@ -279,7 +280,7 @@ const Header = () => {
                             <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
                               <Users className="text-gray-400" size={16} />
                             </div>
-                            <span className="text-sm font-medium text-gray-400">Communauté Bricks</span>
+                            <span className="text-sm font-medium text-gray-400">Communauté X-fund</span>
                           </div>
                           <ArrowRight className="text-gray-300" size={16} />
                         </div>
@@ -300,10 +301,9 @@ const Header = () => {
             </div>
           </div>
         </nav>
-
-        <button className="hidden lg:block bg-primary text-white px-4 py-2 rounded shadow-md transition hover:bg-primary">
-          Connexion
-        </button>
+        <Button className="hidden lg:block bg-primary hover:bg-primary/90 h-12 px-8 rounded-full text-white font-semibold">
+           Connexion
+        </Button>
 
         <button 
           className="lg:hidden p-2"
