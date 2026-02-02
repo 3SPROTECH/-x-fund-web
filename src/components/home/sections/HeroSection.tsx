@@ -9,12 +9,14 @@ import sparkImage from "@/assets/spark.png";
 
 const Hero = () => {
   return (
-    <Section className="pt-8 md:py- bg-[#f5f9f5] overflow-hidden">
+    <Section className="pt-8 pb-8 md:pb-0 bg-[#f5f9f5] overflow-hidden">
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-0 items-center">
         
         {/* Left Column: Content */}
-        <div className="space-y-5 lg:pr-4 xl:pr-10 w-full">
+        {/* FIX: Added 'flex flex-col items-center text-center sm:items-start sm:text-left' 
+            to center everything on mobile but align left when the image appears (sm+) */}
+        <div className="space-y-5 lg:pr-4 xl:pr-10 w-full flex flex-col items-center text-center sm:items-start sm:text-left">
           <div className="space-y-4">
             <h1 className="text-4xl xs:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               L'investissement <br />
@@ -27,7 +29,8 @@ const Hero = () => {
           </div>
 
           <div className="space-y-4 w-full">
-            <div className="w-full max-w-none">
+            {/* FIX: Added 'flex justify-center sm:justify-start' to center the form on mobile */}
+            <div className="w-full max-w-none flex justify-center sm:justify-start">
                 <InvestForm />
             </div>
             <p className="text-xs text-gray-400">
@@ -35,7 +38,8 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-4">
+          {/* FIX: Added 'justify-center sm:justify-start' to center buttons on mobile */}
+          <div className="flex flex-wrap gap-4 pt-4 justify-center sm:justify-start">
             <Button className="bg-primary text-white rounded-full px-6 py-3 h-auto w-full xs:w-auto">
               Commencer maintenant
             </Button>
@@ -58,7 +62,8 @@ const Hero = () => {
         </div>
 
         {/* Right Column: Images */}
-        <div className="relative flex justify-center lg:justify-end items-center lg:mt-0 lg:ml-0 lg:pr-12 lap:pr-20 xl:pr-0 xl:-ml-12 ">
+        {/* Kept 'hidden sm:flex' so it disappears on mobile */}
+        <div className="relative hidden sm:flex justify-center lg:justify-end items-center lg:mt-0 lg:ml-0 lg:pr-12 lap:pr-20 xl:pr-0 xl:-ml-12 ">
            
            <div className="
              relative overflow-hidden
