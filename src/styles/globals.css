@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -42,6 +43,3 @@
   --breakpoint-ult: 2560px;   /* 4K / Ultra-wide screens */
 }
 
-
-/* We use @import here so it loads automatically */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
