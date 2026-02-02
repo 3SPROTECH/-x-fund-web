@@ -1,0 +1,16 @@
+/* 1. Import the Tailwind engine */
+@import "tailwindcss";
+
+/* 2. Configure your Theme directly here */
+@theme {
+  /* Set Poppins as the default sans font */
+  --font-sans: "Poppins", sans-serif;
+  
+  /* Define your custom colors */
+  --color-primary: #24AD1F;
+  --color-primary-hover: #1e941a; /* slightly darker for hover states */
+}
+
+/* 3. Add the Poppins font from Google */
+/* We use @import here so it loads automatically */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
