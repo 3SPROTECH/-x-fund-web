@@ -6,6 +6,7 @@ Afin de maintenir le code propre et maintenable à grande échelle, ce projet su
 # Structure des Dossiers
 Veuillez respecter strictement l'arborescence suivante lors de la création de nouveaux fichiers :
 
+```text
 src/
 ├── components/
 │   ├── layout/                 # Composants globaux de mise en page
@@ -23,19 +24,20 @@ src/
 │   │   └── Testimonials.tsx
 │   │
 │   ├── about/                  # Composants spécifiques à la Page "À propos"
-│   │   ├── AboutSection.tsx    # (Nommé explicitement pour éviter les conflits)
+│   │   ├── AboutSection.tsx    
 │   │   └── TeamGrid.tsx
 │   │
 │   ├── services/               # Composants spécifiques à la Page Services
 │   │   └── ServiceList.tsx
 │   │
-│   └── ...
+│   └── contact/                # Composants spécifiques à la Page Contact
+│       └── ContactForm.tsx
 │
 ├── pages/                      # Les Vues (Pages) principales
-│   ├── HomePage.tsx            # Assemble les composants de components/home
-│   ├── AboutPage.tsx           # Assemble les composants de components/about
+│   ├── HomePage.tsx            
+│   ├── AboutPage.tsx           
 │   ├── ServicesPage.tsx
-│   └── ...
+│   └── ContactPage.tsx
 │
 ├── assets/                     # Ressources statiques
 │   ├── images/
