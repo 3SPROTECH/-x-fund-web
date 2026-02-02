@@ -9,7 +9,6 @@ import sparkImage from "@/assets/spark.png";
 
 const Hero = () => {
   return (
-    // FIX: Reduced top padding from 'pt-12 md:py-24' to 'pt-8 md:py-16'
     <Section className="pt-8 md:py- bg-[#f5f9f5] overflow-hidden">
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-0 items-center">
@@ -37,10 +36,10 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <Button className="bg-primary text-white rounded-md px-6 py-3 h-auto w-full xs:w-auto">
+            <Button className="bg-primary text-white rounded-full px-6 py-3 h-auto w-full xs:w-auto">
               Commencer maintenant
             </Button>
-            <Button variant="outline" className="border-gray-300 rounded-md px-6 py-3 h-auto w-full xs:w-auto">
+            <Button variant="outline" className="border-gray-300 rounded-full px-6 py-3 h-auto w-full xs:w-auto">
               Voir les projets
             </Button>
           </div>
