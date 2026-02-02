@@ -17,6 +17,7 @@ interface CounterProps {
     numberColor?: string;
     titleColor?: string;
   };
+  className?: string; // Added className prop for flexibility
 }
 
 const Counter: React.FC<CounterProps> = ({
@@ -30,6 +31,7 @@ const Counter: React.FC<CounterProps> = ({
   inline = false,
   icon,
   config,
+  className = "", // Default to empty string
 }) => {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
@@ -46,7 +48,8 @@ const Counter: React.FC<CounterProps> = ({
 
   // If inline is true, we force specific classes to override the standard alignment
   const containerClasses = inline 
-    ? "flex flex-row items-center gap-3" 
+    // FIX: Added 'justify-center sm:justify-start' to center on mobile and align left on larger screens
+    ? "flex flex-row items-center gap-3 justify-center sm:justify-start" 
     : (() => {
         const map = {
           top: "flex flex-col items-center text-center",
@@ -58,13 +61,13 @@ const Counter: React.FC<CounterProps> = ({
       })();
 
   return (
-    <div className={containerClasses}>
+    <div className={`${containerClasses} ${className}`}>
       {icon && <div className="shrink-0">{icon}</div>}
       
       {/* If inline: outer wrapper is row, inner wrapper is row.
         If not inline: outer wrapper matches contentAlignment, inner wrapper is column.
       */}
-      <div className={`flex ${inline ? 'flex-row flex-wrap items-baseline gap-2' : 'flex-col'}`}>
+      <div className={`flex ${inline ? 'flex-row flex-wrap items-baseline gap-2 justify-center sm:justify-start' : 'flex-col'}`}>
         
         {/* Main Number + Title Block */}
         <div className="flex items-baseline font-bold text-2xl" style={{ color: config?.numberColor }}>
