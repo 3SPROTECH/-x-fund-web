@@ -32,7 +32,7 @@ export function InvestForm() {
                 <Input 
                   placeholder="Votre Email ..." 
                   {...field} 
-                  className="h-12 rounded-full border-gray-300 focus-visible:ring-primary" 
+                  className="h-12 rounded-full border-gray-300 focus-visible:ri  ng-primary" 
                 />
               </FormControl>
               <FormMessage />

@@ -9,7 +9,7 @@ import sparkImage from "@/assets/spark.png";
 
 const Hero = () => {
   return (
-    <Section className="pt-8 md:py- bg-[#f5f9f5] overflow-hidden">
+    <Section className="pt-8 pb-8 md:pb-0 bg-[#f5f9f5] overflow-hidden">
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-0 items-center">
         
@@ -58,7 +58,7 @@ const Hero = () => {
         </div>
 
         {/* Right Column: Images */}
-        <div className="relative flex justify-center lg:justify-end items-center lg:mt-0 lg:ml-0 lg:pr-12 lap:pr-20 xl:pr-0 xl:-ml-12 ">
+        <div className="relative hidden sm:flex justify-center  lg:justify-end items-center lg:mt-0 lg:ml-0 lg:pr-12 lap:pr-20 xl:pr-0 xl:-ml-12 ">
            
            <div className="
              relative overflow-hidden
