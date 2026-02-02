@@ -480,13 +480,9 @@ const Header = () => {
                 </div>
               )}
             </div>
-
-            <button 
-              className="w-full bg-primary text-white px-4 py-3 rounded-lg shadow-md transition hover:bg-primary font-medium mt-8"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <Button className="w-full bg-primary text-white hover:bg-primary/90 h-12 px-8 rounded-full text-white font-semibold">
               Connexion
-            </button>
+           </Button>
           </div>
         </div>
       </div>
