@@ -275,24 +275,6 @@ const Header = () => {
                           </div>
                           <ArrowRight className="text-gray-400 group-hover/card:text-primary transition-colors" size={16} />
                         </a>
-                        <div className="flex items-center justify-between p-3 bg-white rounded-lg opacity-50 cursor-not-allowed">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                              <Users className="text-gray-400" size={16} />
-                            </div>
-                            <span className="text-sm font-medium text-gray-400">Communauté X-fund</span>
-                          </div>
-                          <ArrowRight className="text-gray-300" size={16} />
-                        </div>
-                        <div className="flex items-center justify-between p-3 bg-white rounded-lg opacity-50 cursor-not-allowed">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                              <GraduationCap className="text-gray-400" size={16} />
-                            </div>
-                            <span className="text-sm font-medium text-gray-400">Academy</span>
-                          </div>
-                          <ArrowRight className="text-gray-300" size={16} />
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -387,53 +369,63 @@ const Header = () => {
               
               {openMobileDropdown === 'qui' && (
                 <div className="mt-2 mb-4 space-y-2">
-                  <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
-                        <FileText className="text-primary" size={16} />
-                      </div>
-                      <span className="text-sm font-medium text-gray-800">Notre histoire</span>
+                    {/* Section À propos */}
+                    <h4 className="text-sm font-medium text-gray-800">À propos</h4>
+                    <div className="flex flex-col gap-3">
+                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <FileText className="text-primary" size={16} />
+                        </div>
+                        <span className="text-sm font-medium text-gray-800">Notre histoire</span>
+                        </div>
+                        <ArrowRight className="text-gray-400" size={16} />
+                    </a>
+                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <Users className="text-primary" size={16} />
+                        </div>
+                        <span className="text-sm font-medium text-gray-800">Notre expertise</span>
+                        </div>
+                        <ArrowRight className="text-gray-400" size={16} />
+                    </a>
+                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <Newspaper className="text-primary" size={16} />
+                        </div>
+                        <span className="text-sm font-medium text-gray-800">Presse</span>
+                        </div>
+                        <ArrowRight className="text-gray-400" size={16} />
+                    </a>
+                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <Mail className="text-primary" size={16} />
+                        </div>
+                        <span className="text-sm font-medium text-gray-800">Contact</span>
+                        </div>
+                        <ArrowRight className="text-gray-400" size={16} />
+                    </a>
                     </div>
-                    <ArrowRight className="text-gray-400" size={16} />
-                  </a>
-                  <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
-                        <Users className="text-primary" size={16} />
-                      </div>
-                      <span className="text-sm font-medium text-gray-800">Notre expertise</span>
+
+                    {/* Nouvelle section Team */}
+                    <h4 className="text-sm font-medium text-gray-800">Team</h4>
+                    <div className="flex flex-col gap-3">
+                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <UserPlus className="text-primary" size={16} />
+                        </div>
+                        <span className="text-sm font-medium text-gray-800">Nous rejoindre</span>
+                        </div>
+                        <ArrowRight className="text-gray-400" size={16} />
+                    </a>
                     </div>
-                    <ArrowRight className="text-gray-400" size={16} />
-                  </a>
-                  <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
-                        <Newspaper className="text-primary" size={16} />
-                      </div>
-                      <span className="text-sm font-medium text-gray-800">Presse</span>
-                    </div>
-                    <ArrowRight className="text-gray-400" size={16} />
-                  </a>
-                  <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
-                        <Mail className="text-primary" size={16} />
-                      </div>
-                      <span className="text-sm font-medium text-gray-800">Contact</span>
-                    </div>
-                    <ArrowRight className="text-gray-400" size={16} />
-                  </a>
-                  <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
-                        <UserPlus className="text-primary" size={16} />
-                      </div>
-                      <span className="text-sm font-medium text-gray-800">Nous rejoindre</span>
-                    </div>
-                    <ArrowRight className="text-gray-400" size={16} />
-                  </a>
                 </div>
-              )}
+                )}
+
             </div>
 
             <div>
@@ -477,6 +469,52 @@ const Header = () => {
                     </div>
                     <ArrowRight className="text-gray-400" size={16} />
                   </a>
+                    <div>
+                      <h4 className="text-sm font-medium text-gray-800">Communauté</h4>
+                      <div className="flex flex-col gap-3">
+                        <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                              <Star className="text-primary" size={16} />
+                            </div>
+                            <span className="text-sm font-medium text-gray-800">Avis</span>
+                          </div>
+                          <ArrowRight className="text-gray-400 group-hover/card:text-primary transition-colors" size={16} />
+                        </a>
+                        <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                              <Mic className="text-primary" size={16} />
+                            </div>
+                            <span className="text-sm font-medium text-gray-800">Notre Podcast</span>
+                          </div>
+                          <ArrowRight className="text-gray-400 group-hover/card:text-primary transition-colors" size={16} />
+                        </a>
+                        <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                              <BookOpen className="text-primary" size={16} />
+                            </div>
+                            <span className="text-sm font-medium text-gray-800">X-fund Stories</span>
+                          </div>
+                          <ArrowRight className="text-gray-400 group-hover/card:text-primary transition-colors" size={16} />
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-gray-800">Bientôt</h4>
+                      <div className="flex flex-col gap-3">
+                        <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                              <Map className="text-primary" size={16} />
+                            </div>
+                            <span className="text-sm font-medium text-gray-800">Roadmap Publique</span>
+                          </div>
+                          <ArrowRight className="text-gray-400 group-hover/card:text-primary transition-colors" size={16} />
+                        </a>
+                      </div>
+                    </div>
                 </div>
               )}
             </div>
