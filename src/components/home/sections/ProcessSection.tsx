@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { GoldenButton } from '@/components/ui/GoldenButton';
+import appleLogo from '@/assets/logo/apple-logo.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,6 +14,7 @@ import step1 from '@/assets/steps/step1.png';
 import step2 from '@/assets/steps/step2.png';
 import step3 from '@/assets/steps/step3.png';
 import step4 from '@/assets/steps/step4.png';
+import { SectionHeading } from '@/components/shared/SectionHeading';
 
 const processSteps = [
     {
@@ -45,25 +47,20 @@ const processSteps = [
 
 const ProcessSection: React.FC = () => {
     return (
-        <section className="bg-white overflow-hidden">
+        <section className="bg-white ">
             {/* White Header Top */}
             <div className="bg-white pt-20 pb-12">
                 <div className="container mx-auto px-4 lg:pl-20">
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
                         <div className="max-w-2xl">
-                            <span className="text-primary font-semibold tracking-wider text-sm uppercase mb-4 block">
-                                LA PLATEFORME
-                            </span>
-                            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                                Comment Investir Dans L'immobilier Avec <span className="text-primary">X-Fund</span> ?
-                            </h2>
+                            <SectionHeading title="Comment Investir Dans L'immobilier Avec X-Fund ?" goldifyString="X-Fund" subtitle="LA PLATEFORME" />
                             <p className="text-gray-600 text-lg lg:text-xl">
                                 Notre Processus D'inscription Est Rapide Et Facile.
                             </p>
                         </div>
 
                         {/* Navigation Buttons */}
-                        <div className="flex gap-4 pb-2">
+                        <div className="flex gap-4 pb-2 lg:mr-20">
                             <button className="swiper-button-prev-custom w-12 h-12 rounded-full flex items-center justify-center transition-all cursor-pointer bg-primary text-white shadow-lg shadow-primary/20 enabled:hover:bg-primary/90 disabled:bg-primary/10 disabled:text-primary disabled:shadow-none disabled:cursor-not-allowed">
                                 <ArrowLeft size={24} />
                             </button>
@@ -76,7 +73,7 @@ const ProcessSection: React.FC = () => {
             </div>
 
             {/* Content Area */}
-            <div className="bg-white pb-24">
+            <div className="bg-white pb-18">
                 <div className="container mx-auto px-4 lg:pl-20">
                     <Swiper
                         modules={[Navigation, Pagination]}
@@ -97,7 +94,7 @@ const ProcessSection: React.FC = () => {
                     >
                         {processSteps.map((step) => (
                             <SwiperSlide key={step.id} className="h-auto">
-                                <div className="bg-[#1A1A1A] rounded-[2rem] p-10 lg:p-12 w-full h-[340px] lg:h-[360px] shadow-2xl flex flex-row items-start gap-8 transition-all duration-500 hover:-translate-y-2 group">
+                                <div className="bg-[#1A1A1A] rounded-[2rem] p-10 lg:p-12 w-full h-[340px] lg:h-[360px] mb-10 hover:shadow-[8px_8px_25px_rgba(212,175,55,0.35)]  flex flex-row items-start gap-8 transition-all duration-500 group">
                                     <div className="flex-[1.2] text-left">
                                         <span className="text-5xl lg:text-6xl font-bold text-primary opacity-90 mb-6 block leading-none">
                                             {step.id}
@@ -133,21 +130,27 @@ const ProcessSection: React.FC = () => {
                     </Swiper>
 
                     {/* Footer Actions */}
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-16 lg:gap-24 mt-16">
-                        <GoldenButton variant="secondary" className="px-12 py-5 text-lg rounded-xl border-primary text-primary hover:bg-primary/5">
+                    <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-16 lg:gap-24 mt-4">
+                        <GoldenButton variant="secondary" className="px-10 py-3.5 text-base rounded-lg border-primary text-primary hover:bg-primary/5">
                             Créer mon Compte maintenant
                         </GoldenButton>
 
-                        <div className="flex items-center gap-6">
-                            <a href="#" className="hover:scale-105 transition-transform duration-300">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                    alt="Google Play"
-                                    className="h-[64px] rounded-lg border border-white/10 grayscale brightness-[2.5]"
-                                />
+                        <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                            <a href="#" className="bg-[#1A1A1A] flex items-center gap-3 px-5 py-2 rounded-lg border  transition-all hover:shadow-[8px_8px_25px_rgba(212,175,55,0.35)] hover:border-primary group">
+                                <img src={appleLogo} alt="Apple Store" className="w-7 h-7 object-contain" />
+                                <div>
+                                    <div className="text-[8px] uppercase text-white/60 leading-none font-poppins">App Store</div>
+                                    <div className="text-xs font-bold text-white font-poppins">iOS Download</div>
+                                </div>
                             </a>
-                            <a href="#" className="hover:scale-105 transition-transform duration-300">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-[64px] rounded-lg border border-white/10" />
+                            <a href="#" className="bg-[#1A1A1A] flex items-center gap-3 px-5 py-2 rounded-lg border  transition-all  hover:shadow-[8px_8px_25px_rgba(212,175,55,0.35)] hover:border-primary group">
+                                <svg className="w-6 h-6 fill-white" viewBox="0 0 512 512">
+                                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-10.3 18-28.5-1.2-40.8zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
+                                </svg>
+                                <div>
+                                    <div className="text-[8px] uppercase text-white/60 leading-none font-poppins">Play Store</div>
+                                    <div className="text-xs font-bold text-white font-poppins">Android App</div>
+                                </div>
                             </a>
                         </div>
                     </div>
