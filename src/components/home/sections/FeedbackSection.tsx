@@ -5,6 +5,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Section from "@/components/ui/Section";
 
 const testimonials = [
     {
@@ -41,7 +42,7 @@ const StarIcon = ({ className }: { className?: string }) => (
 
 export const FeedbackSection = () => {
     return (
-        <section className="py-24 px-6 lg:px-24 bg-slate-50/30 overflow-hidden">
+        <Section className="py-24  bg-slate-50/30 overflow-hidden">
             {/* Global SVG Gradient Definition */}
             <svg width="0" height="0" className="absolute">
                 <defs>
@@ -53,13 +54,13 @@ export const FeedbackSection = () => {
                 </defs>
             </svg>
 
-            <div className="max-w-7xl mx-auto">
+            <div className="">
                 {/* Header Section */}
                 <div className="mb-20 text-center lg:text-left flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                     <div className="max-w-2xl">
                         <SectionHeading
                             subtitle="La voix de nos investisseurs"
-                            title={"Une confiance bâtie sur \nl'excellence immobilière"}
+                            title={"Une confiance bâtie sur l'excellence immobilière"}
                             goldifyString="excellence immobilière"
                             className=""
                         />
@@ -147,7 +148,7 @@ export const FeedbackSection = () => {
                     bottom: 0 !important;
                 }
             `}} />
-        </section>
+        </Section>
     );
 };
 

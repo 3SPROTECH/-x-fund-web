@@ -2,7 +2,9 @@ import FeedbackSection from "@/components/home/sections/FeedbackSection"
 import HeroSection from "@/components/home/sections/HeroSection"
 import OpportunitiesSection from "@/components/home/sections/OpportunitiesSection"
 import ProcessSection from "@/components/home/sections/ProcessSection"
-
+import WhySection from "@/components/home/sections/WhySection"
+import ContactSection from "@/components/home/sections/ContactSection"
+import SecuriteSection from "@/components/home/sections/SecuriteSection"
 
 const HomePage = () => {
   return (
@@ -13,6 +15,9 @@ const HomePage = () => {
       <FeedbackSection/>
 
 
+      <WhySection/>      
+      <ContactSection />
+      <SecuriteSection />
     </div>
   )
 }

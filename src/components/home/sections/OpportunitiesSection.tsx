@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import oppImage1 from "@/assets/opportinities/opportinutiesimage1.png";
 import oppImage2 from "@/assets/opportinities/opportinutiesimage2.png";
 import oppImage3 from "@/assets/opportinities/opportinutiesimage3.png";
+import Section from "@/components/ui/Section";
 
 
 
@@ -48,7 +49,7 @@ const ActionArea = ({ className }: { className?: string }) => (
 
 export const OpportunitiesSection = () => {
     return (
-        <section className="relative min-h-screen bg-[#050505] overflow-hidden py-20 px-6 lg:px-24">
+        <Section className="relative min-h-screen bg-[#050505] overflow-hidden py-20">
             {/* Background Decorative Dot Pattern */}
             <div
                 className="absolute top-0 right-0 w-full lg:w-1/3 h-full pointer-events-none opacity-15"
@@ -64,16 +65,9 @@ export const OpportunitiesSection = () => {
                     {/* Left Column: Content area */}
                     <div className="lg:col-span-6 space-y-10">
                         <div className="space-y-6 text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3">
-                                <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
-                                <span className="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold font-poppins">
-                                    Opportunités Variées
-                                </span>
-                            </div>
-
                             <SectionHeading
-                                title={"Des typologies de \nbiens exclusifs"}
-                                subtitle="" // Subtitle handled manually above for custom styling
+                                title={"Des typologies de biens exclusifs"}
+                                subtitle="Opportunités Variées"
                                 goldifyString="biens exclusifs"
                                 className="mb-0 text-center lg:text-left items-center lg:items-start"
                                 titleClassName="text-white !text-5xl md:!text-6xl lg:!text-7xl !font-bold leading-[1.1] tracking-tight"
@@ -141,7 +135,7 @@ export const OpportunitiesSection = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 };
 

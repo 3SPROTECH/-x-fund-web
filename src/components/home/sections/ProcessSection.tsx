@@ -15,6 +15,7 @@ import step2 from '@/assets/steps/step2.png';
 import step3 from '@/assets/steps/step3.png';
 import step4 from '@/assets/steps/step4.png';
 import { SectionHeading } from '@/components/shared/SectionHeading';
+import Section from '@/components/ui/Section';
 
 const processSteps = [
     {
@@ -47,10 +48,10 @@ const processSteps = [
 
 const ProcessSection: React.FC = () => {
     return (
-        <section className="bg-white ">
+        <Section className="bg-white ">
             {/* White Header Top */}
             <div className="bg-white pt-20 pb-12">
-                <div className="container mx-auto px-4 lg:pl-20">
+                <div className="container mx-auto">
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
                         <div className="max-w-2xl">
                             <SectionHeading title="Comment Investir Dans L'immobilier Avec X-Fund ?" goldifyString="X-Fund" subtitle="LA PLATEFORME" />
@@ -131,7 +132,7 @@ const ProcessSection: React.FC = () => {
 
                     {/* Footer Actions */}
                     <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-16 lg:gap-24 mt-4">
-                        <GoldenButton variant="secondary" className="px-10 py-3.5 text-base rounded-lg border-primary text-primary hover:bg-primary/5">
+                        <GoldenButton variant="secondary" className="px-10 py-3.5 text-base rounded-sm border-primary text-primary hover:bg-primary/5">
                             Créer mon Compte maintenant
                         </GoldenButton>
 
@@ -156,7 +157,7 @@ const ProcessSection: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 };
 
