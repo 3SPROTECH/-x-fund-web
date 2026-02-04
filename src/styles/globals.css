@@ -8,6 +8,8 @@
   --color-primary: #D4AF37;
   --color-primary-hover: #F2C94C; 
   --color-primary-dark: #0B0B0B;
+  --color-primary-subtle-bg: rgba(212, 175, 55, 0.08);
+  --color-primary-subtle-border: rgba(212, 175, 55, 0.2);
   --color-secondary-slate: #1F2937;    
   --color-accent-action: #F59E0B;      
   --color-text-main: #FFFFFF;          
