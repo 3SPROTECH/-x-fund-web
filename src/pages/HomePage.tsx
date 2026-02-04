@@ -1,4 +1,6 @@
+import FeedbackSection from "@/components/home/sections/FeedbackSection"
 import HeroSection from "@/components/home/sections/HeroSection"
+import OpportunitiesSection from "@/components/home/sections/OpportunitiesSection"
 import ProcessSection from "@/components/home/sections/ProcessSection"
 import WhySection from "@/components/home/sections/WhySection"
 import ContactSection from "@/components/home/sections/ContactSection"
@@ -10,6 +12,10 @@ const HomePage = () => {
     <div className="">
       <HeroSection />
       <ProcessSection />
+      <OpportunitiesSection/>
+      <FeedbackSection/>
+
+
       <WhySection/>      
       <SecuriteSection />
       <FAQSection />

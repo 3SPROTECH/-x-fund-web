@@ -2,16 +2,20 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { GoldenButton } from '@/components/ui/GoldenButton';
+import appleLogo from '@/assets/logo/apple-logo.png';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import step1 from '../../../assets/steps/step1.png';
-import step2 from '../../../assets/steps/step2.png';
-import step3 from '../../../assets/steps/step3.png';
-import step4 from '../../../assets/steps/step4.png';
+import step1 from '@/assets/steps/step1.png';
+import step2 from '@/assets/steps/step2.png';
+import step3 from '@/assets/steps/step3.png';
+import step4 from '@/assets/steps/step4.png';
+import { SectionHeading } from '@/components/shared/SectionHeading';
+import Section from '@/components/ui/Section';
 
 const processSteps = [
     {
@@ -36,7 +40,7 @@ const processSteps = [
     },
     {
         id: '04',
-        title: 'Suivez vos\ninvestissements',
+        title: 'Suivez vos investissements',
         description: 'X-fund facilite le suivi de vos investissements grâce à notre interface intuitive.',
         image: step4,
     },
@@ -44,91 +48,81 @@ const processSteps = [
 
 const ProcessSection: React.FC = () => {
     return (
-        <section className="bg-[#F4F4F4]">
-            {/* Grey Header Top */}
-            <div className="bg-[#F4F4F4] pt-20 pb-12">
-                <div className="container mx-auto px-4 lg:pl-20 text-center">
-                    <h3 className="text-[#32B92D] font-bold text-xl lg:text-3xl uppercase tracking-[0.2em]">
-                        LA PLATEFORME
-                    </h3>
+        <Section className="bg-white ">
+            {/* White Header Top */}
+            <div className="bg-white pt-20 pb-12">
+                <div className="container mx-auto">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                        <div className="max-w-2xl">
+                            <SectionHeading title="Comment Investir Dans L'immobilier Avec X-Fund ?" goldifyString="X-Fund" subtitle="LA PLATEFORME" />
+                            <p className="text-gray-600 text-lg lg:text-xl">
+                                Notre Processus D'inscription Est Rapide Et Facile.
+                            </p>
+                        </div>
+
+                        {/* Navigation Buttons */}
+                        <div className="flex gap-4 pb-2 lg:mr-20">
+                            <button className="swiper-button-prev-custom w-12 h-12 rounded-full flex items-center justify-center transition-all cursor-pointer bg-primary text-white shadow-lg shadow-primary/20 enabled:hover:bg-primary/90 disabled:bg-primary/10 disabled:text-primary disabled:shadow-none disabled:cursor-not-allowed">
+                                <ArrowLeft size={24} />
+                            </button>
+                            <button className="swiper-button-next-custom w-12 h-12 rounded-full flex items-center justify-center transition-all cursor-pointer bg-primary text-white shadow-lg shadow-primary/20 enabled:hover:bg-primary/90 disabled:bg-primary/10 disabled:text-primary disabled:shadow-none disabled:cursor-not-allowed">
+                                <ArrowRight size={24} />
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            {/* Grey Content Area */}
-            <div className="pb-20">
+            {/* Content Area */}
+            <div className="bg-white pb-18">
                 <div className="container mx-auto px-4 lg:pl-20">
-                    {/* Secondary Header */}
-                    <div className="mb-16 pt-12 px-4">
-                        <div className="flex flex-col md:flex-row justify-between items-end text-left">
-                            <div className="max-w-4xl md:-translate-y-8">
-                                <h2 className="text-2xl lg:text-4xl font-bold text-slate-900 mb-6 leading-tight md:whitespace-nowrap">
-                                    Comment Investir Dans L'immobilier Avec X-Fund ?
-                                </h2>
-                                <p className="text-slate-600 text-lg">
-                                    Notre Processus D'inscription Est Rapide Et Facile.
-                                </p>
-                            </div>
-
-                            {/* Navigation Buttons on the right */}
-                            <div className="flex gap-4 mt-8 md:mt-0 md:pr-4 pb-0 md:translate-y-8">
-                                <button className="swiper-button-prev-custom w-12 h-12 rounded-full bg-[#A2D9A1]/80 flex items-center justify-center text-white hover:bg-[#A2D9A1] transition-all cursor-pointer shadow-sm">
-                                    <ArrowLeft size={24} />
-                                </button>
-                                <button className="swiper-button-next-custom w-12 h-12 rounded-full bg-[#32B92D] flex items-center justify-center text-white hover:bg-[#2da629] transition-all cursor-pointer shadow-md">
-                                    <ArrowRight size={24} />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Swiper Slider */}
                     <Swiper
                         modules={[Navigation, Pagination]}
-                        spaceBetween={20}
+                        spaceBetween={30}
                         slidesPerView={1}
+                        loop={false}
+                        centeredSlides={false}
                         navigation={{
                             prevEl: '.swiper-button-prev-custom',
                             nextEl: '.swiper-button-next-custom',
                         }}
                         breakpoints={{
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 20,
-                            },
-                            1280: {
-                                slidesPerView: 2.5,
-                                spaceBetween: 24,
-                            },
+                            640: { slidesPerView: 1.1 },
+                            1024: { slidesPerView: 2 },
+                            1280: { slidesPerView: 2.4 }
                         }}
-                        className="pb-20 pt-4"
+                        className="py-16 overflow-visible"
                     >
                         {processSteps.map((step) => (
-                            <SwiperSlide key={step.id} className="flex px-2 overflow-visible">
-                                <div className="bg-white rounded-[2rem] p-8 lg:p-10 w-full shadow-none hover:shadow-[12px_12px_25px_rgba(50,185,45,0.15)] active:shadow-[12px_12px_25px_rgba(50,185,45,0.25)] border border-slate-100/30 flex flex-row items-start gap-4 h-[340px] mb-6 transition-all duration-300 cursor-pointer">
+                            <SwiperSlide key={step.id} className="h-auto">
+                                <div className="bg-[#1A1A1A] rounded-[2rem] p-10 lg:p-12 w-full h-[340px] lg:h-[360px] mb-10 hover:shadow-[8px_8px_25px_rgba(212,175,55,0.35)]  flex flex-row items-start gap-8 transition-all duration-500 group">
                                     <div className="flex-[1.2] text-left">
-                                        <span className="text-4xl lg:text-5xl font-black text-[#32B92D] mb-4 block leading-none">
+                                        <span className="text-5xl lg:text-6xl font-bold text-primary opacity-90 mb-6 block leading-none">
                                             {step.id}
                                         </span>
-                                        <h4 className="text-xl lg:text-2xl font-bold text-slate-900 mb-3 leading-tight whitespace-pre-line">
+                                        <h4 className="text-xl lg:text-2xl font-bold text-white mb-4 leading-tight">
                                             {step.title}
                                         </h4>
-                                        <p className="text-slate-600 text-[10px] lg:text-xs leading-relaxed">
-                                            {step.description}
-                                        </p>
-                                        {step.subtext && (
-                                            <p className="text-slate-400 text-[9px] mt-2 italic">
-                                                {step.subtext}
+                                        <div className="space-y-3 pr-4">
+                                            <p className="text-gray-400 text-xs lg:text-sm leading-relaxed line-clamp-3">
+                                                {step.description}
                                             </p>
-                                        )}
+                                            {step.subtext && (
+                                                <p className="text-gray-500 text-xs italic">
+                                                    {step.subtext}
+                                                </p>
+                                            )}
+                                        </div>
                                     </div>
-                                    <div className="flex-1 flex justify-end items-center h-full self-center">
+
+                                    <div className="flex-1 relative flex justify-end items-center h-full">
+                                        {/* Phone reflection/glow effect */}
+                                        <div className="absolute inset-0 bg-primary/5 blur-2xl rounded-full scale-75 group-hover:scale-90 transition-transform duration-700" />
+
                                         <img
                                             src={step.image}
                                             alt={step.title}
-                                            className={`w-full h-auto object-contain transition-transform duration-500 hover:scale-110 ${step.id === '01'
-                                                ? 'max-w-[110px] lg:max-w-[140px]'
-                                                : 'max-w-[140px] lg:max-w-[180px]'
-                                                }`}
+                                            className="relative z-10 h-full max-h-[260px] lg:max-h-[300px] w-auto object-contain transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>
                                 </div>
@@ -136,24 +130,34 @@ const ProcessSection: React.FC = () => {
                         ))}
                     </Swiper>
 
-                    {/* Bottom Actions */}
-                    <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 md:pr-4">
-                        <button className="px-10 py-4 border border-[#32B92D]/40 text-[#32B92D] font-bold rounded-xl hover:bg-[#32B92D] hover:text-white transition-all cursor-pointer bg-white shadow-[0_0_20px_rgba(50,185,45,0.15)] hover:shadow-[0_0_25px_rgba(50,185,45,0.3)]">
+                    {/* Footer Actions */}
+                    <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-16 lg:gap-24 mt-4">
+                        <GoldenButton variant="secondary" className="px-10 py-3.5 text-base rounded-sm border-primary text-primary hover:bg-primary/5">
                             Créer mon Compte maintenant
-                        </button>
+                        </GoldenButton>
 
-                        <div className="flex items-center gap-6 md:pr-[5%] lg:pr-[10%]">
-                            <a href="#" className="hover:opacity-80 transition-opacity">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-12" />
+                        <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                            <a href="#" className="bg-[#1A1A1A] flex items-center gap-3 px-5 py-2 rounded-lg border  transition-all hover:shadow-[8px_8px_25px_rgba(212,175,55,0.35)] hover:border-primary group">
+                                <img src={appleLogo} alt="Apple Store" className="w-7 h-7 object-contain" />
+                                <div>
+                                    <div className="text-[8px] uppercase text-white/60 leading-none font-poppins">App Store</div>
+                                    <div className="text-xs font-bold text-white font-poppins">iOS Download</div>
+                                </div>
                             </a>
-                            <a href="#" className="hover:opacity-80 transition-opacity">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-12" />
+                            <a href="#" className="bg-[#1A1A1A] flex items-center gap-3 px-5 py-2 rounded-lg border  transition-all  hover:shadow-[8px_8px_25px_rgba(212,175,55,0.35)] hover:border-primary group">
+                                <svg className="w-6 h-6 fill-white" viewBox="0 0 512 512">
+                                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-10.3 18-28.5-1.2-40.8zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
+                                </svg>
+                                <div>
+                                    <div className="text-[8px] uppercase text-white/60 leading-none font-poppins">Play Store</div>
+                                    <div className="text-xs font-bold text-white font-poppins">Android App</div>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 };
 

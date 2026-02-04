@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "@/lib/utils"; // Assuming you have a standard shadcn/utils file
+import { cn } from "@/lib/utils";
 
 interface FloatingCardsProps {
   className?: string;
@@ -34,18 +34,17 @@ export function FloatingCards({
   notificationValue = "+450€",
 }: FloatingCardsProps) {
   return (
-    <div className={cn("relative h-[600px] w-full max-w-[600px] flex items-center justify-center lg:justify-end group perspective-[1000px]", className)}>
+    <div className={cn("relative h-[600px] w-full max-w-[600px] flex items-center justify-center lg:justify-end group", className)}>
       
       {/* 1. Background Blob (Decorative) */}
       <div className="absolute right-0 top-1/4 w-full max-w-md h-[400px] bg-gradient-to-tr from-[#F3E5AB]/40 to-transparent rounded-[40px] blur-2xl -z-10 animate-[float_8s_ease-in-out_4s_infinite]"></div>
 
-      {/* 2. MAIN CARD: Tilted Hover Effect */}
+      {/* 2. MAIN CARD: 2D Rotation (No distortion) */}
       <div 
         className="absolute right-0 top-[10%] w-[85%] max-w-md bg-white p-3 rounded-2xl border border-gray-100 z-10 
         shadow-[0_20px_50px_-10px_rgba(0,0,0,0.15)] 
-        transform transition-transform duration-700 ease-out
-        rotate-y-[-5deg] rotate-x-[2deg] group-hover:rotate-0 group-hover:translate-y-0"
-        style={{ transformStyle: 'preserve-3d' }}
+        transform transition-all duration-500 ease-out
+        rotate-[4deg] group-hover:rotate-0 group-hover:translate-y-0"
       >
         {/* Image Container */}
         <div className="relative h-[280px] rounded-xl overflow-hidden">
@@ -84,8 +83,14 @@ export function FloatingCards({
         </div>
       </div>
 
-      {/* 3. STATS CARD: Glassmorphism + Floating Animation */}
-      <div className="absolute bottom-[15%] left-0 sm:left-[5%] w-[70%] max-w-xs p-6 rounded-2xl border border-white/60 z-20 backdrop-blur-xl bg-white/85 shadow-[0_30px_60px_-12px_rgba(5,5,5,0.2)] animate-[float_8s_ease-in-out_infinite]">
+      {/* 3. STATS CARD: White Glassmorphism */}
+      <div className="absolute bottom-[15%] left-0 sm:left-[5%] w-[70%] max-w-xs p-6 rounded-2xl z-20 
+        bg-gradient-to-br from-white/80 to-white/40 
+        backdrop-blur-2xl 
+        border border-white/50 
+        shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] 
+        animate-[float_8s_ease-in-out_infinite]"
+      >
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-[#050505] rounded-lg text-[#D4AF37]">
@@ -118,7 +123,7 @@ export function FloatingCards({
         </span>
       </div>
 
-      {/* Global Style for Keyframes (to make component self-contained without tailwind.config) */}
+      {/* Global Style for Keyframes */}
       <style>{`
         @keyframes float {
           0% { transform: translateY(0px); }
