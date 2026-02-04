@@ -1,5 +1,4 @@
-import * as React from "react";
-import { cn } from "@/lib/utils"; // Assuming you have a standard shadcn/utils file
+import { cn } from "@/lib/utils";
 
 interface FloatingCardsProps {
   className?: string;
@@ -84,8 +83,14 @@ export function FloatingCards({
         </div>
       </div>
 
-      {/* 3. STATS CARD: Glassmorphism + Floating Animation */}
-      <div className="absolute bottom-[15%] left-0 sm:left-[5%] w-[70%] max-w-xs p-6 rounded-2xl border border-white/60 z-20 backdrop-blur-xl bg-white/85 shadow-[0_30px_60px_-12px_rgba(5,5,5,0.2)] animate-[float_8s_ease-in-out_infinite]">
+      {/* 3. STATS CARD: UPDATED Glassmorphism */}
+      <div className="absolute bottom-[15%] left-0 sm:left-[5%] w-[70%] max-w-xs p-6 rounded-2xl z-20 
+        bg-gradient-to-br from-white/80 to-white/40 
+        backdrop-blur-2xl 
+        border border-white/50 
+        shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] 
+        animate-[float_8s_ease-in-out_infinite]"
+      >
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-[#050505] rounded-lg text-[#D4AF37]">
@@ -118,7 +123,7 @@ export function FloatingCards({
         </span>
       </div>
 
-      {/* Global Style for Keyframes (to make component self-contained without tailwind.config) */}
+      {/* Global Style for Keyframes */}
       <style>{`
         @keyframes float {
           0% { transform: translateY(0px); }
