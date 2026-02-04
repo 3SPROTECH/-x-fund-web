@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import blobsImage from "@/assets/blobs.png";
 import handWithPhoneImage from "@/assets/hand-with-phone.png";
 import sparkImage from "@/assets/spark.png";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 
 const Hero = () => {
   return (
@@ -26,6 +27,11 @@ const Hero = () => {
             <p className="text-base xs:text-lg text-primary w-full leading-relaxed">
               Investissez dans des projets immobiliers dès 10 euros via des obligations et recevez des revenus tous les mois
             </p>
+            <SectionHeading
+              subtitle="Un Succès Continu"
+              title={`Le monde \n investit ici.`} // Use \n for the line break
+              goldifyString="investit ici."       // This part turns gold
+            />
           </div>
 
           <div className="space-y-4 w-full">
@@ -40,7 +46,7 @@ const Hero = () => {
 
           {/* FIX: Added 'justify-center sm:justify-start' to center buttons on mobile */}
           <div className="flex flex-wrap gap-4 pt-4 justify-center sm:justify-start">
-            <Button className="bg-primary text-white rounded-full px-6 py-3 h-auto w-full xs:w-auto">
+            <Button className="bg-primary text-white rounded-full px-6 py-3 h-auto w-full xs:w-auto ">
               Commencer maintenant
             </Button>
             <Button variant="outline" className="border-gray-300 rounded-full px-6 py-3 h-auto w-full xs:w-auto">
