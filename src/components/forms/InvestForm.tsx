@@ -4,6 +4,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { GoldenButton } from "../ui/GoldenButton";
 
 const formSchema = z.object({
   email: z
@@ -32,7 +33,7 @@ export function InvestForm() {
                 <Input 
                   placeholder="Votre Email ..." 
                   {...field} 
-                  className="h-12 rounded-full border-gray-300 focus-visible:ri  ng-primary" 
+                  className="h-14 border-gray-300 focus-visible:ri  ng-primary" 
                 />
               </FormControl>
               <FormMessage />
@@ -40,13 +41,7 @@ export function InvestForm() {
           )}
         />
         
-
-        <Button 
-          type="submit" 
-          className="bg-primary hover:bg-primary/90 h-12 rounded-full text-white font-semibold px-4 text-sm sm:px-8 sm:text-base shrink-0"
-        >
-          Investir
-        </Button>
+        <GoldenButton type="submit" className="shrink-0 text px-4">Investir Maintenant</GoldenButton>
       </form>
     </Form>
   );
