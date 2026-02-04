@@ -40,7 +40,7 @@ const Hero = () => {
 
           {/* FIX: Added 'justify-center sm:justify-start' to center buttons on mobile */}
           <div className="flex flex-wrap gap-4 pt-4 justify-center sm:justify-start">
-            <Button className="bg-primary text-white rounded-full px-6 py-3 h-auto w-full xs:w-auto">
+            <Button className="bg-primary text-white rounded-full px-6 py-3 h-auto w-full xs:w-auto ">
               Commencer maintenant
             </Button>
             <Button variant="outline" className="border-gray-300 rounded-full px-6 py-3 h-auto w-full xs:w-auto">
