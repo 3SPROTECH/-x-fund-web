@@ -9,7 +9,7 @@ import { Badge } from "../Badge";
 
 const Hero = () => {
   return (
-    <Section className="pt-8 pb-8   overflow-hidden">
+    <Section className="pt-8 pb-8 overflow-hidden">
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-0 items-center">
         
