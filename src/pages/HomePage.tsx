@@ -12,6 +12,8 @@ const HomePage = () => {
       <WhySection/>      
       <ContactSection />
       <SecuriteSection />
+     
+     
     </div>
   )
 }
