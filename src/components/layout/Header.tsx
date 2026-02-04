@@ -4,7 +4,7 @@ import {
   HelpCircle, Shield, Star, Mic, BookOpen, Map, 
   Menu, X
 } from "lucide-react";
-import { Button } from "../ui/button";
+import {GoldenButton} from "../ui/GoldenButton";
 import logoDesktop from "@/assets/logo/logo.png";
 import logoMobile from "@/assets/logo/logoM.png";
 
@@ -68,7 +68,7 @@ const Header = () => {
                   <div className="grid grid-cols-2 gap-6 flex-1">
                     <a href="#" className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center">
+                        <div className="w-10 h-10 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                           <FileText className="text-primary" size={20} />
                         </div>
                         <span className="font-medium text-gray-800">Porteurs de projets</span>
@@ -77,7 +77,7 @@ const Header = () => {
                     </a>
                     <a href="#" className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
+                        <div className="w-10 h-10 bg-primary-subtle-bg  rounded-full flex items-center justify-center">
                           <Building className="text-primary" size={20} />
                         </div>
                         <span className="font-medium text-gray-800">Agents immobilier</span>
@@ -123,7 +123,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <FileText className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Notre histoire</span>
@@ -132,7 +132,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Users className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Notre expertise</span>
@@ -146,7 +146,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Newspaper className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Presse</span>
@@ -155,7 +155,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Mail className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Contact</span>
@@ -169,7 +169,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <UserPlus className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Nous rejoindre</span>
@@ -217,7 +217,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <FileText className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Blog</span>
@@ -226,7 +226,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bgrounded-full flex items-center justify-center">
                               <HelpCircle className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">FAQ</span>
@@ -235,7 +235,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Shield className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Nos garanties</span>
@@ -249,7 +249,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Star className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Avis</span>
@@ -258,7 +258,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Mic className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Notre Podcast</span>
@@ -267,7 +267,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <BookOpen className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">X-fund Stories</span>
@@ -281,7 +281,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Map className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Roadmap Publique</span>
@@ -296,9 +296,9 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        <Button className="hidden lg:block border border-primary text-primary hover:bg-primary hover:text-white transition-colors h-12 px-8 rounded-xl font-semibold bg-transparent">
+        <GoldenButton className="hidden lg:block">
           Connexion
-        </Button>
+        </GoldenButton>
 
         <button 
           className="lg:hidden p-2"
@@ -356,7 +356,7 @@ const Header = () => {
                 <div className="mt-2 mb-4 space-y-3">
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                         <FileText className="text-primary" size={20} />
                       </div>
                       <span className="font-medium text-gray-800">Porteurs de projets</span>
@@ -365,7 +365,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                         <Building className="text-primary" size={20} />
                       </div>
                       <span className="font-medium text-gray-800">Agents immobilier</span>
@@ -399,7 +399,7 @@ const Header = () => {
                         className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-primary-subtle-bg -rounded-full flex items-center justify-center">
                             <FileText className="text-primary" size={16} />
                           </div>
                           <span className="text-sm font-medium text-gray-800">
@@ -414,7 +414,7 @@ const Header = () => {
                         className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                             <Users className="text-primary" size={16} />
                           </div>
                           <span className="text-sm font-medium text-gray-800">
@@ -434,7 +434,7 @@ const Header = () => {
                         className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                             <Newspaper className="text-primary" size={16} />
                           </div>
                           <span className="text-sm font-medium text-gray-800">Presse</span>
@@ -447,7 +447,7 @@ const Header = () => {
                         className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                             <Mail className="text-primary" size={16} />
                           </div>
                           <span className="text-sm font-medium text-gray-800">Contact</span>
@@ -460,7 +460,7 @@ const Header = () => {
                     <div className="flex flex-col gap-3">
                     <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                         <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                        <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                             <UserPlus className="text-primary" size={16} />
                         </div>
                         <span className="text-sm font-medium text-gray-800">Nous rejoindre</span>
@@ -487,7 +487,7 @@ const Header = () => {
                 <div className="mt-2 mb-4 space-y-2">
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                         <FileText className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Blog</span>
@@ -496,7 +496,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                         <HelpCircle className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">FAQ</span>
@@ -505,7 +505,7 @@ const Header = () => {
                   </a>
                   <a href="#" className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                         <Shield className="text-primary" size={16} />
                       </div>
                       <span className="text-sm font-medium text-gray-800">Nos garanties</span>
@@ -517,7 +517,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Star className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Avis</span>
@@ -526,7 +526,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Mic className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Notre Podcast</span>
@@ -535,7 +535,7 @@ const Header = () => {
                         </a>
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <BookOpen className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">X-fund Stories</span>
@@ -549,7 +549,7 @@ const Header = () => {
                       <div className="flex flex-col gap-3">
                         <a href="#" className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow group/card">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary-subtle-bg rounded-full flex items-center justify-center">
                               <Map className="text-primary" size={16} />
                             </div>
                             <span className="text-sm font-medium text-gray-800">Roadmap Publique</span>
@@ -561,9 +561,9 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Button className="w-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors h-12 px-8 rounded-xl font-semibold bg-transparent">
+            <GoldenButton className="w-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors h-12 px-8 rounded-xl font-semibold bg-transparent">
               Connexion
-            </Button>
+            </GoldenButton>
           </div>
         </div>
       </div>
