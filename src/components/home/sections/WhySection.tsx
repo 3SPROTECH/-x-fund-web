@@ -87,13 +87,10 @@ const XFundFeatures: React.FC = () => {
             </div>
           </div>
 
-          {/* --- Right Column: Image & Stats --- */}
-          {/* Note: p-5 ensures there is space for the negative margin outline to show without being cut off */}
           <div className="relative order-first lg:order-last p-5 lg:p-8">
             
             {/* Outline Box - Background Layer */}
-            {/* Positioned absolute relative to the column padding box. Negative top/right makes it peek out behind the image. */}
-            <div className="absolute -top-4 -right-4 lg:-top-10 lg:-right-10 scale-90 w-full h-full border border-[#D4AF37] opacity-60 z-0 rounded" />
+            <div className="absolute -top-4 -right-4 md:-top-10 md:-right-10  scale-90 w-full h-full border border-[#D4AF37] opacity-60 z-0 rounded" />
             
             {/* Main Image Frame - Foreground Layer (z-10) */}
             <div className="relative z-10 w-full aspect-square md:aspect-auto md:h-[500px] lg:h-[600px] overflow-hidden shadow-[0_30px_60px_-12px_rgba(5,5,5,0.5),0_0_40px_-10px_rgba(212,175,55,0.15)] group">
