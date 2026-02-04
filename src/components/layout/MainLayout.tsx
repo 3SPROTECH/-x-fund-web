@@ -7,6 +7,7 @@ const MainLayout = () => {
       <Header />
       <main className="grow">
         <Outlet />
+        
       </main>
       {/*<Footer />*/}
     </div>
