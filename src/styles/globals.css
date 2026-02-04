@@ -5,8 +5,16 @@
   --font-sans: "Poppins", sans-serif;
   --font-handwriting: "Playwrite US Trad", cursive;
   
-  --color-primary: #24AD1F;
-  --color-primary-hover: #1e941a; 
+  --color-primary: #D4AF37;
+  --color-primary-hover: #F2C94C; 
+  --color-primary-dark: #0B0B0B;
+  --color-secondary-slate: #1F2937;    
+  --color-accent-action: #F59E0B;      
+  --color-text-main: #FFFFFF;          
+  --color-text-muted: #9CA3AF;   
+  --color-success: #10B981;            
+  --color-border-light: rgba(255, 255, 255, 0.1);
+
 
   
   /* --- GRANULAR BREAKPOINTS --- */
