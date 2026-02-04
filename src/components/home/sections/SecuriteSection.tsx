@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check } from "lucide-react";
 import { SectionHeading } from '@/components/shared/SectionHeading';
+import Section from '@/components/ui/Section';
 
 const SecuriteSection: React.FC = () => {
   const pointscles = [
@@ -19,7 +20,7 @@ const SecuriteSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 md:py-24 px-4 sm:px-6 md:px-12 lg:px-24 bg-white overflow-hidden">
+    <Section className="py-12 md:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* --- BLOC VISUEL (IMAGES SUPERPOSÉES) --- */}
@@ -85,7 +86,7 @@ const SecuriteSection: React.FC = () => {
         </div>
 
       </div>
-    </section>
+    </Section>
   );
 };
 

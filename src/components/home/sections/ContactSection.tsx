@@ -11,14 +11,15 @@ import {
 
 import { GoldenButton } from '@/components/ui/GoldenButton';
 import { SectionHeading } from '@/components/shared/SectionHeading';
+import Section from '@/components/ui/Section';
 
 const ContactSection: React.FC = () => {
   return (
-    <section className="py-12 md:py-20 px-4 sm:px-6 md:px-12 lg:px-24">
-      <div className="max-w-7xl mx-auto overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] flex flex-col lg:flex-row min-h-[auto] lg:min-h-[700px]">
+    <Section className="py-12 md:py-20">
+      <div className="overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] flex flex-col lg:flex-row min-h-[auto] lg:min-h-[700px]">
 
         {/* --- PARTIE GAUCHE : CONTACT --- */}
-        <div className="lg:w-2/5 bg-white p-6 sm:p-8 md:p-16 flex flex-col justify-between">
+        <div className="lg:w-2/5 bg-white py-6 sm:p-8 md:py-16 flex flex-col justify-between">
           <div>
             <SectionHeading
               subtitle="Nous contacter"
@@ -159,7 +160,7 @@ const ContactSection: React.FC = () => {
         </div>
 
       </div>
-    </section>
+    </Section>
   );
 };
 

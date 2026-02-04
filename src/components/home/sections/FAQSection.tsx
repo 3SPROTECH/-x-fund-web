@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
-import { SectionHeading } from '@/components/shared/SectionHeading';
 import { GoldenButton } from '@/components/ui/GoldenButton';
+import { SectionHeading } from '@/components/shared/SectionHeading';
+import Section from '@/components/ui/Section';
 
 interface FAQItem {
   question: string;
   answer: string;
 }
-
-const faqs: FAQItem[] = [
+ 
+const faqData: FAQItem[] = [
   {
     question: "Qu'est-ce que le crowdfunding immobilier en obligations ?",
     answer: "Le crowdfunding immobilier par obligations permet à des particuliers de prêter de l'argent à un promoteur ou un investisseur pour financer un projet spécifique, en échange d'un taux d'intérêt fixe et du remboursement du capital à l'échéance."
   },
   {
-    question: "Qu'est-ce qu'une Brick ?",
-    answer: "Une \"Brick\" est l'unité de base de votre investissement sur notre plateforme. Elle représente une fraction de l'obligation globale associée à un projet immobilier spécifique."
+    question: "Qu'est-ce qu'une X-fund ?",
+    answer: "Une \"X-fund\" est l'unité de base de votre investissement sur notre plateforme. Elle représente une fraction de l'obligation globale associée à un projet immobilier spécifique."
   },
   {
     question: "Qu'est-ce qu'une obligation ?",
@@ -42,69 +43,69 @@ const faqs: FAQItem[] = [
 const FAQSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleFaq = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
-    <section className="relative min-h-screen bg-[#050505] py-20 px-6 md:px-12 lg:px-24 overflow-hidden">
-      {/* Effets de lueur en arrière-plan */}
-      <div className="absolute top-1/4 -right-10 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 -left-10 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
+    <Section className="h-auto bg-[#050505] py-10 sm:py-16 md:py-20 relative overflow-hidden">
+      
+      {/* --- EFFETS DE FOND --- */}
+      <div className="absolute right-[-10%] top-[20%] w-[60%] h-[80%] bg-radial-gradient from-primary/10 to-transparent opacity-50 pointer-events-none blur-[80px]" />
+      <div className="absolute left-[-10%] bottom-[10%] w-[40%] h-[50%] bg-radial-gradient from-white/5 to-transparent opacity-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-start relative z-10">
         
-        {/* --- PARTIE GAUCHE : TEXTE --- */}
-        <div className="lg:col-span-5 lg:sticky lg:top-32 h-fit">
-          <SectionHeading 
-            subtitle="FAQ" 
-            goldifyString="fréquentes" 
+        {/* --- PARTIE GAUCHE : HEADER --- */}
+        <div className="lg:col-span-5 lg:sticky lg:top-10 flex flex-col items-center lg:items-start text-center lg:text-left">
+          <SectionHeading
+            subtitle="FAQ"
+            goldifyString="fréquentes"
             title="Vos questions les plus fréquentes"
+            titleClassName='text-white'
           />
-          <p className="text-gray-400 text-lg mt-6 mb-10 max-w-md leading-relaxed">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-6 mt-4 max-w-md leading-relaxed">
             Nous nous basons sur vos nombreux retours pour répondre à vos questions.
           </p>
           
-          <GoldenButton className="px-10">
+          <GoldenButton className="w-full sm:w-auto py-3 px-6 uppercase text-xs sm:text-sm tracking-wide">
             En savoir plus sur X-Fund
           </GoldenButton>
         </div>
 
         {/* --- PARTIE DROITE : ACCORDÉON --- */}
-        <div className="lg:col-span-7 space-y-2">
-          {faqs.map((faq, index) => {
-            const isOpen = activeIndex === index;
-            
-            return (
-              <div 
-                key={index}
-                className={`border-b border-primary/15 transition-all duration-300 ${isOpen ? 'bg-white/5' : 'hover:bg-white/[0.02]'}`}
-              >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full py-6 flex items-center justify-between text-left group"
-                >
-                  <h3 className={`text-lg md:text-xl font-medium transition-colors duration-300 ${isOpen ? 'text-primary' : 'text-white group-hover:text-primary/80'}`}>
-                    {faq.question}
-                  </h3>
-                  <div className={`transform transition-transform duration-300 flex-shrink-0 ml-4 ${isOpen ? 'rotate-45 text-primary' : 'text-gray-500'}`}>
-                    <Plus className="w-6 h-6" />
-                  </div>
-                </button>
-
-                <div 
-                  className={`overflow-hidden transition-all duration-400 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100 pb-8' : 'max-h-0 opacity-0'}`}
-                >
-                  <p className="text-gray-400 leading-relaxed pr-10">
-                    {faq.answer}
-                  </p>
+        <div className="lg:col-span-7 space-y-1 mt-8 lg:mt-0">
+          {faqData.map((item, index) => (
+            <div 
+              key={index}
+              className={`border-b border-primary/10 transition-all duration-300 cursor-pointer hover:bg-white/[0.02] py-4 sm:py-5 ${
+                activeIndex === index ? 'bg-white/[0.01]' : ''
+              }`}
+              onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+            >
+              <div className="flex items-center justify-between gap-4">
+                <h3 className={`text-sm sm:text-base md:text-lg font-medium transition-colors duration-300 ${
+                  activeIndex === index ? 'text-primary' : 'text-white hover:text-primary/80'
+                }`}>
+                  {item.question}
+                </h3>
+                <div className={`transition-transform duration-300 flex-shrink-0 ${
+                  activeIndex === index ? 'rotate-45 text-primary' : 'text-white/50'
+                }`}>
+                  <Plus className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
               </div>
-            );
-          })}
+
+              {/* Contenu de la réponse */}
+              <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                activeIndex === index ? 'max-h-[500px] opacity-100 mt-3' : 'max-h-0 opacity-0'
+              }`}>
+                <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed pb-2">
+                  {item.answer}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>
-    </section>
+    </Section>
   );
 };
 
