@@ -1,16 +1,35 @@
+/* 1. FONTS (Inter + Handwriting) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playwrite+US+Trad&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  /* --- FONTS --- */
+  --font-sans: "Inter", sans-serif;
+  --font-handwriting: "Playwrite US Trad", cursive;
+
+  /* --- BREAKPOINTS (Merged Granular System) --- */
+  --breakpoint-mini: 320px;   /* iPhone SE 1st Gen */
+  --breakpoint-xxs: 375px;    /* iPhone X/11/12/13/SE */
+  --breakpoint-xs: 475px;     /* Phablets */
+  --breakpoint-sm: 640px;     /* Standard Tailwind SM */
+  --breakpoint-tab: 700px;    /* Mid-size tablets */
+  --breakpoint-md: 768px;     /* Standard Tailwind MD */
+  --breakpoint-md-lg: 900px;  /* Surface Pro / Vertical Foldables */
+  --breakpoint-lg: 1024px;    /* Standard Tailwind LG */
+  --breakpoint-lap: 1150px;   /* 13-inch MacBooks */
+  --breakpoint-xl: 1280px;    /* Standard Tailwind XL */
+  --breakpoint-desk: 1440px;  /* 1440p Monitors */
+  --breakpoint-2xl: 1536px;   /* Standard Tailwind 2XL */
+  --breakpoint-3xl: 1600px;   /* Wide monitors */
+  --breakpoint-4xl: 1920px;   /* Full HD */
+  --breakpoint-ult: 2560px;   /* 4K */
+
+  /* --- COLORS: SHADCN SYSTEM (Maps to :root variables) --- */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -29,11 +48,6 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -42,10 +56,80 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* --- COLORS: GLOBAL DESIGN SYSTEM (Static Hex Values) --- */
+  /* These provide specific values for your custom design needs */
+  --color-gold: #D4AF37;
+  --color-gold-light: #F3E5AB;
+  --color-gold-dark: #AA8C2C;
+  --color-gold-50: #1A1608;
+  --color-gold-100: #2D260F;
+
+  --color-onyx: #050505;
+  --color-onyx-light: #E5E7EB;
+  --color-onyx-muted: #9CA3AF;
+  --color-onyx-card: #111111;
+  --color-onyx-surface: #121212;
+
+  /* Legacy / Specific utility colors from your file */
+  --color-primary: #D4AF37; 
+  --color-primary-hover: #F2C94C; 
+  --color-primary-dark: #0B0B0B;
+  --color-primary-subtle-bg: rgba(212, 175, 55, 0.08);
+  --color-primary-subtle-border: rgba(212, 175, 55, 0.2);
+  --color-secondary-slate: #1F2937;    
+  --color-accent-action: #F59E0B;      
+  --color-text-main: #FFFFFF;          
+  --color-text-muted: #676971;   
+  --color-success: #10B981;            
+  --color-border-light: rgba(255, 255, 255, 0.1);
+
+  /* --- CHARTS --- */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* --- RADIUS --- */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* --- CUSTOM SHADOWS --- */
+  --shadow-gold-glow: 0 15px 30px -10px rgba(212, 175, 55, 0.25);
+  --shadow-card-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  --shadow-card-float: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+
+  /* --- CUSTOM ANIMATIONS --- */
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-float-delayed: float 8s ease-in-out 4s infinite;
+  --animate-scroll-up: scrollUp 20s linear infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* 2. KEYFRAMES */
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 3. ROOT VARIABLES (Shadcn + Theme Tokens) */
 :root {
   --radius: 0.625rem;
+  
+  /* Light Mode (Although your design seems dark-first, this handles light mode fallback) */
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);
   --card: oklch(1 0 0);
@@ -113,11 +197,59 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* 4. UTILITY LAYERS & COMPONENT CLASSES */
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Premium Button Styles */
+  .btn-premium {
+    background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
+    @apply relative overflow-hidden transition-all duration-300 text-white shadow-gold-glow;
+  }
+
+  .btn-premium::after {
+    content: '';
+    @apply absolute top-0 -left-full w-full h-full;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+  }
+
+  .btn-premium:hover::after {
+    @apply left-full;
+  }
+
+  .btn-premium:hover {
+    @apply -translate-y-0.5;
+    box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+  }
+
+  /* Glass Panel / Card Styles */
+  .glass-panel {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Background Graphic */
+  .bg-graphic {
+    @apply absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[120%] -z-10 pointer-events-none;
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, rgba(5, 5, 5, 0) 70%);
   }
 }
