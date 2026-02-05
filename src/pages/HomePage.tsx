@@ -12,14 +12,14 @@ const HomePage = () => {
   return (
     <div className="">
       <HeroSection />
-      <ProcessSection />
-      <OpportunitiesSection/>
-      <FeedbackSection/>
       <WhySection/>      
       <SecuriteSection />
+      <OpportunitiesSection/>
+      <ProcessSection />
       <CommunitySection />
       <FAQSection />
-     <ContactSection />
+      <FeedbackSection/>
+      <ContactSection />
     </div>
   )
 }
