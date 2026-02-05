@@ -6,6 +6,7 @@ import WhySection from "@/components/home/sections/WhySection"
 import ContactSection from "@/components/home/sections/ContactSection"
 import SecuriteSection from "@/components/home/sections/SecuriteSection"
 import CommunitySection from "@/components/home/sections/CommunitySection"
+import FAQSection from "@/components/home/sections/FAQSection"
 
 const HomePage = () => {
   return (
@@ -15,9 +16,10 @@ const HomePage = () => {
       <OpportunitiesSection/>
       <FeedbackSection/>
       <WhySection/>      
-      <ContactSection />
       <SecuriteSection />
       <CommunitySection />
+      <FAQSection />
+     <ContactSection />
     </div>
   )
 }
