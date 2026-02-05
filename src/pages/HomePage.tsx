@@ -5,6 +5,7 @@ import ProcessSection from "@/components/home/sections/ProcessSection"
 import WhySection from "@/components/home/sections/WhySection"
 import ContactSection from "@/components/home/sections/ContactSection"
 import SecuriteSection from "@/components/home/sections/SecuriteSection"
+import CommunitySection from "@/components/home/sections/CommunitySection"
 import FAQSection from "@/components/home/sections/FAQSection"
 
 const HomePage = () => {
@@ -14,10 +15,9 @@ const HomePage = () => {
       <ProcessSection />
       <OpportunitiesSection/>
       <FeedbackSection/>
-
-
       <WhySection/>      
       <SecuriteSection />
+      <CommunitySection />
       <FAQSection />
      <ContactSection />
     </div>
