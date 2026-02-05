@@ -19,7 +19,7 @@ const ContactSection: React.FC = () => {
       <div className="overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] flex flex-col lg:flex-row min-h-[auto] lg:min-h-[700px]">
 
         {/* --- PARTIE GAUCHE : CONTACT --- */}
-        <div className="lg:w-2/5 bg-white py-6 sm:p-8 md:py-16 flex flex-col justify-between">
+        <div className="lg:w-2/5 bg-white py-6 flex flex-col justify-between">
           <div>
             <SectionHeading
               subtitle="Nous contacter"
@@ -110,7 +110,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         {/* --- PARTIE DROITE : SOUMISSION --- */}
-        <div className="lg:w-3/5 bg-gray-50/50 p-6 sm:p-8 md:p-16 flex flex-col justify-center relative overflow-hidden">
+        <div className="lg:w-3/5 bg-gray-50/50 flex flex-col justify-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#faf8f2] rounded-full -mr-40 -mt-40 opacity-60 blur-3xl"></div>
 
           <div className="relative z-10">

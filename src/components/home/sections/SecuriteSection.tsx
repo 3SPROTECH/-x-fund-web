@@ -32,7 +32,7 @@ const SecuriteSection: React.FC = () => {
           <div className="absolute w-[85%] h-[80%] rounded-2xl bg-gray-100 transform -rotate-6 translate-x-[-5px] shadow-lg overflow-hidden border-4 border-white sm:w-[80%] sm:h-[75%]"></div>
 
           {/* Image principale (inclinée à droite) */}
-          <div className="relative z-10 w-[90%] h-[85%] rounded-2xl transform rotate-3 shadow-2xl overflow-hidden border-4 border-white sm:w-[85%] sm:h-[80%]">
+          <div className="relative z-10 w-[90%] h-[85%] rounded-2xl transform rotate-3  hover:rotate-0 shadow-2xl overflow-hidden border-4 border-white sm:w-[85%] sm:h-[80%] transition-all duration-500 ease-out">
             <img 
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" 
               alt="Propriété de luxe" 
