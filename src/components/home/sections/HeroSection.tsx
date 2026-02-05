@@ -14,9 +14,9 @@ const Hero = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-0 items-center">
         
         {/* Left Column: Content */}
-        {/* UPDATED: Changed 'sm:items-start sm:text-left' to 'lg:items-start lg:text-left' 
-            This keeps it centered on tablets (sm & md) and only aligns left on desktop (lg+) */}
-        <div className="space-y-5 lg:pr-4 xl:pr-10 w-full flex flex-col items-center text-center lg:items-start lg:text-left">
+        {/* UPDATED: Removed 'items-center text-center' and 'lg:...' overrides. 
+            Now uses 'items-start text-left' permanently. */}
+        <div className="space-y-5 lg:pr-4 xl:pr-10 w-full flex flex-col items-start text-left">
           <div className="">
             <Badge text="Opportunité Exclusive" className="mb-2"/>
             <SectionHeading
@@ -29,9 +29,8 @@ const Hero = () => {
           </div>
 
           <div className="space-y-4 w-full">
-            {/* UPDATED: Changed 'sm:justify-start' to 'lg:justify-start' 
-                to keep the form centered on tablets */}
-            <div className="w-full max-w-none flex justify-center lg:justify-start">
+            {/* UPDATED: Removed 'justify-center'. Now always 'justify-start'. */}
+            <div className="w-full max-w-none flex justify-start">
                 <InvestForm />
             </div>
             <p className="text-xs text-gray-400">
@@ -45,7 +44,6 @@ const Hero = () => {
         </div>
 
         {/* Right Column: Images */}
-        {/* Kept 'hidden sm:flex' so it disappears on mobile phones but shows on tablets */}
         <div className="relative hidden sm:flex justify-center lg:justify-end items-center lg:mt-0 lg:ml-0 lg:pr-12 lap:pr-20 xl:pr-0 xl:-ml-12 ">
             <FloatingCards 
             mainTitle="Villa Miami"
